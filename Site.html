@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<title>Tisha's Salon & Spa Bar</title>
+<link rel="stylesheet" type="text/css" href="global.css">
+<link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Harlow Solid Italic", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+.bgimg {
+    background-position: 75%;
+	background-color:	white;
+    background-size: contain;
+    background-image: url("images/logo.jpg");
+	background-repeat: no-repeat;
+    min-height: 75%;
+	
+}
+</style>
+<body>
+
+
+<!-- Sidebar/menu -->
+<div id = "sidebarNav">
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Tisha's Salon<br>& Spa Bar</b></h3>
+  </div>
+  <div class="w3-bar-block"><i>
+	<div id = "showcase">
+    <a href="#showcase1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style = "text-align: center">Showcase</a>
+	</div>
+	<a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style = "text-align: center">About</a>  
+	<a href="#review" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style = "text-align: center">Review</a> 
+    <a href="#services1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style = "text-align: center">Services</a> 
+    <a href="#location" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white" style = "text-align: center">Location</a> 
+  </i>
+  </div>
+</nav>
+</div>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Tisha's Salon & Spa Bar</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container bgimg" style="margin-top:80px" id="showcase1">
+    <h1 class="w3-jumbo"><b>Salon & Spa Bar</b></h1>
+  </div>
+  <div class="w3-container"  id="showcase">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Showcase</b></h1>
+    <hr style="width:50px;border:5px solid #434447" class="w3-round">
+  </div>
+  
+<!-- Container for the image gallery -->
+<div class="container">
+
+<!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext"></div>
+      <img src="Images/image1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext"></div>
+      <img src="Images/image2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext"></div>
+      <img src="Images/image3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext"></div>
+      <img src="Images/image4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext"></div>
+      <img src="Images/image5.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext"></div>
+      <img src="Images/image6.jpg" style="width:100%">
+  </div>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Images/image1.jpg" style="width:100%" onclick="currentSlide(1)">
+    </div>
+    <div class="column"> 
+      <img class="demo cursor" src="Images/image2.jpg" style="width:100%" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/image3.jpg" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/image4.jpg" style="width:100%" onclick="currentSlide(4)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/image5.jpg" style="width:100%" onclick="currentSlide(5)">
+    </div> 
+    <div class="column">
+      <img class="demo cursor" src="Images/image6.jpg" style="width:100%" onclick="currentSlide(6)">
+    </div>
+  </div>
+</div>
+
+<script>
+//Photo gallery
+	<script>
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+  <!-- About -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>About</b></h1>
+    <hr style="width:50px;border:5px solid #434447" class="w3-round">
+	<div id = "summary">
+    <p>We are a little salon in Leechburg with an amazing team of girls. We are here to provide you with the best salon experience possible. We are excited to announce that we are in the process of switching over to a more natural organic salon. The first in this area to use these color line and products. This has been my dream for a very long time. With the everyday life being exposed to so many chemicals you can feel safe in knowing we are here to change that up. With ammonia, and PPD free color.</p>
+	</div>
+	<div id = "hours">
+	<p>Monday -- Closed<p>
+	<p>Tuesday -- 10AM-7PM</p>
+	<p>Wednesday -- 10AM-7PM</p>
+	<p>Thursday -- 10AM-7PM</p>
+	<p>Friday -- 10AM-4PM</p>
+	<p>Saturday -- 9AM-2PM</p>
+	<p>Sunday -- Closed</p>
+	</div>
+   </div>
+   <div id = "review">
+   <img src = "Images/review1.jpg" style = "width: 60%">
+	</div>
+  <!-- Services -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Services</b></h1>
+    <hr style="width:50px;border:5px solid #434447" class="w3-round">
+    <p></p>
+   </div>
+
+  <!-- Services -->
+<div id= "summary">
+<p>All Prices vary or start at:</p>
+ <ul>
+	<li>Women's cut $23.00</li>
+	<li>Men's cut $14.00</li>
+	<li>Child's cut under 12 $8.00</li>
+	<li>Child's cut over 12 $12.00</li>
+	<li>Shampoo/Style $15.00</li>
+	<li>Updo's $55.00</li>
+	<li>Conditioning treatment/Bonder $20.00</li>
+	<li>Brazilian Blowout $150.00</li>
+	<li>Highlights full head $70.00</li>
+	<li>Partila highlight $50.00</li>
+	<li>Small foil (8 foils or less) $15.00</li>
+	<li>All over color reg. $50.00</li>
+	<li>Color retouch $45.00</li>
+	<li>Full perm $55.00</li>
+	<li>Partial perm $40.00</li>
+	<li>Spiral perm $65.00</li>
+	<li>Eyebrow wax $10.00/ Lip $6.00/ Chin $4.00</li>
+	<li>Manicure $15.00/ French +$3.00</li>
+	<li>Gelish $25.00</li>
+	<li>Acrylics regular $45.00</li>
+	<li>P&W Glitter $48.00</li>
+	<li>Back fills $40.00</li>
+	<li>Regular fills $25.00</li>
+	<li>Soak off $25.00</li>
+	<li>Paraffin for hands +$2.00</li>
+	<li>Spa pedicure $35.00</li>
+	<li>Express pedicure $25.00</li>
+	<li>Polish change $10.00</li>
+	<li>Makeup $50.00</li>
+	</ul>
+<p>Available for Wedding parties and Birthday parties. Book now!</p>
+</div>
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="location" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Location</b></h1>
+    <hr style="width:50px;border:5px solid #434447" class="w3-round">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d735.4722161466133!2d-79.60738684705922!3d40.62783609182728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834bb1e463bf71d%3A0x95bb8a6ad5199a0b!2sTisha&#39;s+Salon+%26+Spa+Bar+LLC!5e0!3m2!1sen!2sus!4v1525352606385" width="100%" height="40%" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+
+	
+  
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+	<script>
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>
